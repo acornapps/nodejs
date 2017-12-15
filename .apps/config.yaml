@@ -1,18 +1,14 @@
-appname: nodejs
 builds: []
 variables:
-- name: Image
-  value: builder-dev.acornsoft.io/apps/flask:dJ7DNTALL
-- name: Replicas
-  value: "1"
-- name: AppName
-  value: nodejs
-- name: RequestCpu
-  value: 0m
-- name: RequestMemory
-  value: 0Mi
-- name: LimitCpu
-  value: 0m
-- name: LimitMemory
-  value: 0Mi
-addons: []
+  - name: Image
+    value: builder-dev.acornsoft.io/apps/nodejs:latest
+  - name: Replicas
+    value: 1
+  - name: RequestCpu
+    value: 100m
+  - name: RequestMemory
+    value: 100Mi
+  - name: LimitCpu
+    value: 100m
+  - name: LimitMemory
+    value: 100Mi
